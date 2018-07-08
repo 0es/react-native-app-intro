@@ -371,6 +371,7 @@ export default class AppIntro extends Component {
           onScroll={Animated.event(
             [{ x: this.state.parallax }]
           )}
+          scrollEnabled={this.props.scrollEnabled}
         >
           {pages}
         </Swiper>
