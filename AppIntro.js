@@ -144,6 +144,10 @@ export default class AppIntro extends Component {
     this.props.onNextBtnClick(context.state.index);
   }
 
+  scrollTo = (index) => {
+    this.refs.AppSwiper.scrollTo(index)
+  }
+
   setDoneBtnOpacity = (value) => {
     Animated.timing(
       this.state.doneFadeOpacity, {
@@ -358,6 +362,7 @@ export default class AppIntro extends Component {
       <View>
         {androidPages}
         <Swiper
+          ref="AppSwiper"
           loop={false}
           index={this.props.defaultIndex}
           renderPagination={this.renderPagination}
