@@ -216,6 +216,8 @@ export default class AppIntro extends Component {
       isDoneBtnShow = false;
       isSkipBtnShow = true;
     }
+    if (!this.props.scrollEnabled)
+      return (<View></View>)
     return (
       <View style={[this.styles.paginationContainer]}>
         {this.props.showSkipButton ? <SkipButton
